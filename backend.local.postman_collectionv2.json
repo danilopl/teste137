@@ -1,0 +1,368 @@
+{
+	"variables": [],
+	"info": {
+		"name": "backend.local",
+		"_postman_id": "ceec0f2b-2ce1-5324-c86e-17c508cd6f36",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"description": "",
+			"item": [
+				{
+					"name": "Criar usuário",
+					"request": {
+						"url": "http://backend.local/api/auth/signup",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Danilo Pereira de Lima Usuario",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "email@cni.administrador.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "teste123",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "teste123",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": "Cadastrar usuario"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"url": "http://backend.local/api/auth/login",
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "email@cni.administrador.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "teste123",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": "Login do usuario"
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"url": "http://backend.local/api/auth/logout",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MmFiNzM3My1jMGU4LTRiNzktODgxZS1lZTMzNGM2MTIwMjgiLCJqdGkiOiIyNjU5Mzk4ZGUwMTRiMzg5MTMxMTk4NzFhNTRkMThkMWUwMzVmZWEwM2JjNTA0MzZjNmY1NTRjZTcxMDAyZGJiMmJjNDg5OWFkMDU1ODdjMCIsImlhdCI6IjE2MTI2NTE5NTYuMzI1MTM2IiwibmJmIjoiMTYxMjY1MTk1Ni4zMjUxMzgiLCJleHAiOiIxNjI4MjkwMzU2LjI1MjkwMyIsInN1YiI6IjIiLCJzY29wZXMiOlsiYWRtaW5pc3RyYWRvciJdfQ.UuifRbu4F2xIJm2olWRpW4cV0yfskYVUcU7wt4mMH5IpXgq6xHfliX8NEZM7WeooLkePvHLh5SWkZU7-s8DUt1SPp3rqHTrHiKfZFEYhoAT9rkFXDvWSa3cX8G70DbpvmOS-Zh2D0fKgARWZfhOW2wS1zax0-sp92BRs-Nmm42rOZrnspqUOrqqulGWJsSuXSViUssyhqfdHPrXTOYTue5uE4xxdRVBsuq7NaKWbanlZGQ0zCQ-7iw12P_TweqNfSbnZ4WCZ6r98TKRydVnDPIDpti6dX1HTouBNm_lO48bbJKLhDGiWxNuALGMg3CKPPvkFjdTr9RliJ_DfuRTsJIrVU9zEKHepx0Aj_8h-gMhv8ugVuFThhpDoU3Oqs6QtUpm9cR2_1rQ2jGqOMMf7COkq_z7VqEp0AQASBbPC5GAPjE7zxbdQ0xbvq-zhdMWO9fnBwk5tv0WvJoWMY031-hu_3MlOld_1SWB0NhqTuhFIWGvOgFytgXfaLr93d6MXf5MSLoM9mDYsgGTPgT5hWWrhav5YVsyb7hfUOa3npoMRYEYbBX_iXf6sXuCh8PoN7kvcAzocAp3abP2lTcj_MazbjCbOFW-185QF8rn1Yt9-B2pDKoUOLC4soJTgIScweLTFNRkzkt96QQ8ix9hLZTqsQ1Sqh31UTvIGU3tyO_g",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Logout"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"description": "",
+			"item": [
+				{
+					"name": "Informaçao usuário",
+					"request": {
+						"url": "http://backend.local/api/user",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MmFiNzM3My1jMGU4LTRiNzktODgxZS1lZTMzNGM2MTIwMjgiLCJqdGkiOiJiMGM1NGVmM2NiMWEwNGUxM2VmMzRiYjg5YjhkMDczYTE0ZTE3NGRkMzEwYTYwMzg5YjZiZmVjN2Q3NjBlZmM1YzE1ZjNkZjE1MDFiYzYzMSIsImlhdCI6IjE2MTI2NTM2MDguNjg0NDUyIiwibmJmIjoiMTYxMjY1MzYwOC42ODQ0NTQiLCJleHAiOiIxNjI4MjkyMDA4LjYxNDYwNSIsInN1YiI6IjQiLCJzY29wZXMiOlsidXN1YXJpbyJdfQ.sJiUpk6ocstoPHwdIKFd4d-xP97s42LR04-XI4VFFbPdfj_YIGff8QSXc9p1fIJ93z3toIkxL9aifsvYiBdlIZsriV1uipJXnmQ28IuHQVqyTEAdP7Y8AgfJf47hF_GbErERaGrPD6Bt3KGKlcRgvsBuXuprICwNP2kyeij7MpK7h7ySOv59hqzreYqQk6OHO8x3W4cP8nCHpjFDcp1VUaHlcejvP135ciyFd9PomHbdKx8x47-xiB09Hz-Bw6XqOlLIcN4VMcYi2AdR8DU-7uf9nakxmKK1ZGfPtxETzrZHPuvPba_Qcupoc2X0bea6Ck6txUQYo_IYgazGmI-MgMHaMZwCeBmONt41WDb3LxY_9ONB0368X018TP0Eu8mAW5JQzd3PYWcza4Ggoz3PxI65rUPRP_aoIuhmtEpnich8bNdmresRf89VGtHQQWhMnBPGyCN8hNRFwQeOD3xQO_p7_Rq6D-A5Ss6Po54gcl9khDrV5Ci7rESTi0BIimrQWhM-2APRfHkd6jDOQBKjOB2aH_7c5e-f84xnxcFxhY5_94zjSrvlYujfq1UNC4G7KPUiuXHabQtNXAmyzAh6yaZzLnHUib0SbjpJE0KcWAcqPDF2CB_4uKJcIW_zrvs-WRb9FczjNCx_culGOtnILKxH4ov1LuIMTKY8d1c8mhk",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Retorna usuario do token"
+					},
+					"response": []
+				},
+				{
+					"name": "Informaçao usuário + imagens postadas",
+					"request": {
+						"url": "http://backend.local/api/user/image",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MmFkNzZiMS02NjhmLTQ0YzgtOWNmYS01ZTlkYmQ1ZjNlOWIiLCJqdGkiOiJlYmNiYTJjZmNkZTVhOTAxNTg3MDMxYzQ3YzE2Y2M4MDBiNGQ4ZDRmM2Q3NTZlYzE0NmNhNGQwMTZlYzI3MTBhNzNlMDRkODlhMDRmZTcyMCIsImlhdCI6IjE2MTI3MzcyNjkuNzgxMzk5IiwibmJmIjoiMTYxMjczNzI2OS43ODE0MDgiLCJleHAiOiIxNjI4Mzc1NjY5LjY5OTQwNyIsInN1YiI6IjEiLCJzY29wZXMiOlsiYWRtaW5pc3RyYWRvciJdfQ.FSO__4sSZAmDV90CMjGtq33jtkoPHc9Rb7BnQCb7koBHiMnhUapfovLVPGMcI_dfuQqP34FMJtlytBVB3IAVNwMVSAJbJ-8vemceAUHAOSEwxVLzRXoTa2f5gd3pZvY7zmThCBSRu5ms5eRoynBH0ErB1EiF47Pvi_gm4i5h3PG6AaGzWrGkYBOHiZLsWJtSiTXq4EYZv20NLp7HhHrEFfRYl215gA88zF_9OIZnB8nygcNST0gZpI6VKChKsmIIpaIo7kpRcoPpJ0YvuXSGLL7Xszsvdc5gFMjnvBYuUD1vt1HsqRjPlLn6lr8rNq19VD267oVwGgLaQSzgZh6BVBEt32zhnVfGVuOMgXJsOeX_wLA5gKeDBIaiSe1BlCRQ4jQVfzUNAc9K1jZuTiFPiUDvkxHzxzUYolpClGOOKrpLNexGAVh4b1bc7SSJuuUM4cF2jqO_2HFm7e1Xt7pIOOSgSbLo8UZUqwnKSHfUw2VrYj7gM7tBl2koolpSNQMr0N7Smci-kKvimqR3tquogIvlVtWGu5CerykLwxZHrM17L1SyOI_m709Fpur9YF6ATn_eIXrK8X59NPS85wmD3kNXgoDaxPGeRPVL1JQ1KSfKEzNs5feC-jX3sRUTA3wHbhLaaZLPajHGBzx8Ig8eUIn2R7jwaGVFLlIUayJhNB4",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Retorna usuario do token"
+					},
+					"response": []
+				},
+				{
+					"name": "Editar usuário",
+					"request": {
+						"url": "http://backend.local/api/user/update",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MmFiNzM3My1jMGU4LTRiNzktODgxZS1lZTMzNGM2MTIwMjgiLCJqdGkiOiJiMGM1NGVmM2NiMWEwNGUxM2VmMzRiYjg5YjhkMDczYTE0ZTE3NGRkMzEwYTYwMzg5YjZiZmVjN2Q3NjBlZmM1YzE1ZjNkZjE1MDFiYzYzMSIsImlhdCI6IjE2MTI2NTM2MDguNjg0NDUyIiwibmJmIjoiMTYxMjY1MzYwOC42ODQ0NTQiLCJleHAiOiIxNjI4MjkyMDA4LjYxNDYwNSIsInN1YiI6IjQiLCJzY29wZXMiOlsidXN1YXJpbyJdfQ.sJiUpk6ocstoPHwdIKFd4d-xP97s42LR04-XI4VFFbPdfj_YIGff8QSXc9p1fIJ93z3toIkxL9aifsvYiBdlIZsriV1uipJXnmQ28IuHQVqyTEAdP7Y8AgfJf47hF_GbErERaGrPD6Bt3KGKlcRgvsBuXuprICwNP2kyeij7MpK7h7ySOv59hqzreYqQk6OHO8x3W4cP8nCHpjFDcp1VUaHlcejvP135ciyFd9PomHbdKx8x47-xiB09Hz-Bw6XqOlLIcN4VMcYi2AdR8DU-7uf9nakxmKK1ZGfPtxETzrZHPuvPba_Qcupoc2X0bea6Ck6txUQYo_IYgazGmI-MgMHaMZwCeBmONt41WDb3LxY_9ONB0368X018TP0Eu8mAW5JQzd3PYWcza4Ggoz3PxI65rUPRP_aoIuhmtEpnich8bNdmresRf89VGtHQQWhMnBPGyCN8hNRFwQeOD3xQO_p7_Rq6D-A5Ss6Po54gcl9khDrV5Ci7rESTi0BIimrQWhM-2APRfHkd6jDOQBKjOB2aH_7c5e-f84xnxcFxhY5_94zjSrvlYujfq1UNC4G7KPUiuXHabQtNXAmyzAh6yaZzLnHUib0SbjpJE0KcWAcqPDF2CB_4uKJcIW_zrvs-WRb9FczjNCx_culGOtnILKxH4ov1LuIMTKY8d1c8mhk",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Danilo Pereira de Lima Teste Update Usuario",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text",
+									"description": ""
+								},
+								{
+									"key": "password_confirmation",
+									"value": "123456",
+									"type": "text",
+									"description": ""
+								}
+							]
+						},
+						"description": "Atualizar usuario"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Image",
+			"description": "",
+			"item": [
+				{
+					"name": "Administrador",
+					"description": "",
+					"item": [
+						{
+							"name": "Enviar imagem",
+							"request": {
+								"url": "http://backend.local/api/image",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MmFiYjNkZC1iZjU1LTQ0ZWQtYTIwMy1hMzE5ZGIwMDAwY2QiLCJqdGkiOiIyZmQwZjU2OTMwMWYzYzgwM2RkOGE3ZDE3NTRiMThkYWM4NTJiMGE0NjY0NDg4NDVlZjdlNGFlMjJiNzJmODdlNjNkMzEzNWExOGJjODkxNyIsImlhdCI6IjE2MTI2NjE1NjcuMTg3MzM0IiwibmJmIjoiMTYxMjY2MTU2Ny4xODczMzYiLCJleHAiOiIxNjI4Mjk5OTY3LjExNTMwNyIsInN1YiI6IjEiLCJzY29wZXMiOlsiYWRtaW5pc3RyYWRvciJdfQ.oOMj-iKqz6JIg9LLtiymPBanCd-z0U-hpId8gb1zepsPEJzIiht_g1IdfX1rZv3ev2FDF8UQW10ljEREtOqV_FPrcWLyBPmTxHy81nVFSp_SytyC_KyDELWWYFYDES3GZvtsCPBdRRjYZWJ70qq5b1KJb0oobnTev0t7sgDgE3NlY-GNb1pyV4yTBLJIdYBWp_5Sba-eL_7zB3fqZg6QuGldcpkmxNOfDEIpOwOUh6GYHwOdgzocldCQWSI3RMqaA3yx1sWuDnVp52oGYRJPN2S0DD962YZmRicGhBqhD65kzeyiLrLdaR52ZToK6UaSzDitq0IGOVb1Sy5f9kHYtTVovZFsW5l_0VlrjHWz3AQ5rLPRRoYocPtHoAZPQGAsu2JWI10D4Fo7gguHgdj_M-YC9hxpdsTAyfuo33EJ9c69o1goj0lWIUFMba3KGpcS1IeSevtQ27Vcjq8Msl1xd5cNUXiDei6wvOTeOnw3bDQ52DcY3Y0EwnTi2bj1G-97IXm9iXHkSsLWJ2B1VwV1m574-z5n5RJlBObhRJc9_Jmz5ZA92J5OM6DMu6HOq2TP5D6F-Dm3wU258ZEApXrGv6oPMPcG9FsW4WbbCYvIDtvRksJ5ocd_8bEzWrIVLoQAi2aw0PEn2lJitChqGUqO0R7i0XQJTmwVLnbZ_vYw5qk",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"description": "",
+											"type": "file",
+											"src": "Captura de tela de 2020-12-30 11-08-04.png"
+										}
+									]
+								},
+								"description": "Retorna usuario do token"
+							},
+							"response": []
+						},
+						{
+							"name": "Excluir imagem",
+							"request": {
+								"url": "http://backend.local/api/image/2",
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MmFiNzM3My1jMGU4LTRiNzktODgxZS1lZTMzNGM2MTIwMjgiLCJqdGkiOiJiMGM1NGVmM2NiMWEwNGUxM2VmMzRiYjg5YjhkMDczYTE0ZTE3NGRkMzEwYTYwMzg5YjZiZmVjN2Q3NjBlZmM1YzE1ZjNkZjE1MDFiYzYzMSIsImlhdCI6IjE2MTI2NTM2MDguNjg0NDUyIiwibmJmIjoiMTYxMjY1MzYwOC42ODQ0NTQiLCJleHAiOiIxNjI4MjkyMDA4LjYxNDYwNSIsInN1YiI6IjQiLCJzY29wZXMiOlsidXN1YXJpbyJdfQ.sJiUpk6ocstoPHwdIKFd4d-xP97s42LR04-XI4VFFbPdfj_YIGff8QSXc9p1fIJ93z3toIkxL9aifsvYiBdlIZsriV1uipJXnmQ28IuHQVqyTEAdP7Y8AgfJf47hF_GbErERaGrPD6Bt3KGKlcRgvsBuXuprICwNP2kyeij7MpK7h7ySOv59hqzreYqQk6OHO8x3W4cP8nCHpjFDcp1VUaHlcejvP135ciyFd9PomHbdKx8x47-xiB09Hz-Bw6XqOlLIcN4VMcYi2AdR8DU-7uf9nakxmKK1ZGfPtxETzrZHPuvPba_Qcupoc2X0bea6Ck6txUQYo_IYgazGmI-MgMHaMZwCeBmONt41WDb3LxY_9ONB0368X018TP0Eu8mAW5JQzd3PYWcza4Ggoz3PxI65rUPRP_aoIuhmtEpnich8bNdmresRf89VGtHQQWhMnBPGyCN8hNRFwQeOD3xQO_p7_Rq6D-A5Ss6Po54gcl9khDrV5Ci7rESTi0BIimrQWhM-2APRfHkd6jDOQBKjOB2aH_7c5e-f84xnxcFxhY5_94zjSrvlYujfq1UNC4G7KPUiuXHabQtNXAmyzAh6yaZzLnHUib0SbjpJE0KcWAcqPDF2CB_4uKJcIW_zrvs-WRb9FczjNCx_culGOtnILKxH4ov1LuIMTKY8d1c8mhk",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": "Retorna usuario do token"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Download imagem",
+					"request": {
+						"url": "http://backend.local/api/image/3/download",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MmFiNzM3My1jMGU4LTRiNzktODgxZS1lZTMzNGM2MTIwMjgiLCJqdGkiOiJiMGM1NGVmM2NiMWEwNGUxM2VmMzRiYjg5YjhkMDczYTE0ZTE3NGRkMzEwYTYwMzg5YjZiZmVjN2Q3NjBlZmM1YzE1ZjNkZjE1MDFiYzYzMSIsImlhdCI6IjE2MTI2NTM2MDguNjg0NDUyIiwibmJmIjoiMTYxMjY1MzYwOC42ODQ0NTQiLCJleHAiOiIxNjI4MjkyMDA4LjYxNDYwNSIsInN1YiI6IjQiLCJzY29wZXMiOlsidXN1YXJpbyJdfQ.sJiUpk6ocstoPHwdIKFd4d-xP97s42LR04-XI4VFFbPdfj_YIGff8QSXc9p1fIJ93z3toIkxL9aifsvYiBdlIZsriV1uipJXnmQ28IuHQVqyTEAdP7Y8AgfJf47hF_GbErERaGrPD6Bt3KGKlcRgvsBuXuprICwNP2kyeij7MpK7h7ySOv59hqzreYqQk6OHO8x3W4cP8nCHpjFDcp1VUaHlcejvP135ciyFd9PomHbdKx8x47-xiB09Hz-Bw6XqOlLIcN4VMcYi2AdR8DU-7uf9nakxmKK1ZGfPtxETzrZHPuvPba_Qcupoc2X0bea6Ck6txUQYo_IYgazGmI-MgMHaMZwCeBmONt41WDb3LxY_9ONB0368X018TP0Eu8mAW5JQzd3PYWcza4Ggoz3PxI65rUPRP_aoIuhmtEpnich8bNdmresRf89VGtHQQWhMnBPGyCN8hNRFwQeOD3xQO_p7_Rq6D-A5Ss6Po54gcl9khDrV5Ci7rESTi0BIimrQWhM-2APRfHkd6jDOQBKjOB2aH_7c5e-f84xnxcFxhY5_94zjSrvlYujfq1UNC4G7KPUiuXHabQtNXAmyzAh6yaZzLnHUib0SbjpJE0KcWAcqPDF2CB_4uKJcIW_zrvs-WRb9FczjNCx_culGOtnILKxH4ov1LuIMTKY8d1c8mhk",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "",
+									"type": "file",
+									"src": "Captura de tela de 2020-12-30 11-08-04.png"
+								}
+							]
+						},
+						"description": "Retorna usuario do token"
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna informações de todas as imagens",
+					"request": {
+						"url": "http://backend.local/api/image",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MmFiYjNkZC1iZjU1LTQ0ZWQtYTIwMy1hMzE5ZGIwMDAwY2QiLCJqdGkiOiIyZmQwZjU2OTMwMWYzYzgwM2RkOGE3ZDE3NTRiMThkYWM4NTJiMGE0NjY0NDg4NDVlZjdlNGFlMjJiNzJmODdlNjNkMzEzNWExOGJjODkxNyIsImlhdCI6IjE2MTI2NjE1NjcuMTg3MzM0IiwibmJmIjoiMTYxMjY2MTU2Ny4xODczMzYiLCJleHAiOiIxNjI4Mjk5OTY3LjExNTMwNyIsInN1YiI6IjEiLCJzY29wZXMiOlsiYWRtaW5pc3RyYWRvciJdfQ.oOMj-iKqz6JIg9LLtiymPBanCd-z0U-hpId8gb1zepsPEJzIiht_g1IdfX1rZv3ev2FDF8UQW10ljEREtOqV_FPrcWLyBPmTxHy81nVFSp_SytyC_KyDELWWYFYDES3GZvtsCPBdRRjYZWJ70qq5b1KJb0oobnTev0t7sgDgE3NlY-GNb1pyV4yTBLJIdYBWp_5Sba-eL_7zB3fqZg6QuGldcpkmxNOfDEIpOwOUh6GYHwOdgzocldCQWSI3RMqaA3yx1sWuDnVp52oGYRJPN2S0DD962YZmRicGhBqhD65kzeyiLrLdaR52ZToK6UaSzDitq0IGOVb1Sy5f9kHYtTVovZFsW5l_0VlrjHWz3AQ5rLPRRoYocPtHoAZPQGAsu2JWI10D4Fo7gguHgdj_M-YC9hxpdsTAyfuo33EJ9c69o1goj0lWIUFMba3KGpcS1IeSevtQ27Vcjq8Msl1xd5cNUXiDei6wvOTeOnw3bDQ52DcY3Y0EwnTi2bj1G-97IXm9iXHkSsLWJ2B1VwV1m574-z5n5RJlBObhRJc9_Jmz5ZA92J5OM6DMu6HOq2TP5D6F-Dm3wU258ZEApXrGv6oPMPcG9FsW4WbbCYvIDtvRksJ5ocd_8bEzWrIVLoQAi2aw0PEn2lJitChqGUqO0R7i0XQJTmwVLnbZ_vYw5qk",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "",
+									"type": "file",
+									"src": "Captura de tela de 2020-12-30 11-08-04.png"
+								}
+							]
+						},
+						"description": "Retorna usuario do token"
+					},
+					"response": []
+				},
+				{
+					"name": "Retorna informações da imagem",
+					"request": {
+						"url": "http://backend.local/api/image/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MmFiYjMwNy0zZDE3LTQ4ZTItOTg2OC0zM2ExNzI4ZWVlOGIiLCJqdGkiOiIyZTZkYTMyMTJhYzk4MDQ4NGFiY2UxNDBhNmNlODBlOTMzMWM5YjlhNTQ2Nzk3ZjdjODllZjU4NjcxMWU1YzY4ZTdkNmY2YTljNjFkODA5OSIsImlhdCI6IjE2MTI2NjE0MzguOTE3Njk5IiwibmJmIjoiMTYxMjY2MTQzOC45MTc3MDEiLCJleHAiOiIxNjI4Mjk5ODM4Ljg0NzgxMyIsInN1YiI6IjEiLCJzY29wZXMiOlsiYWRtaW5pc3RyYWRvciJdfQ.ozwhBCxCXX6fnoqbOzO6OlzSDmTHiIMkaI24zis1X5RTVHWJBYllD-BDoZsmBIwnzBWHvXvqsZwVigFn7WbpR4S2gsrvBBdMi9U83-8avL7WDRfCbFoujYUwF5CKjwmlBLzFi9p-W7bqNb7k4yccJmuG7rUd_aBhA0SpU9jrEzf6s9E-mzWFpN6NKgMKz3mUT5B6weOXCpXRD6IJdiBHE7yolsHKoTGPdID3AtaE-Oezp1usKQKQwxikPtRZRov-f-tmxOkDT1roYfu-Shvw8Lvdv8uXyf_Y9C3TF0gCK52Uii5NrzaAyTo14-oMF6a6bXZQqsCbgcI6OEy1-jBBq3-dm-STAmBJ8azl6AtCnAeiIzWeW_ke40Eqts9_yvzQJ6X422KBh9H7OIhsDRqXyGNnkSnU09nn1lPwQTgf_2Sn8RM321apx9a18OJ-4ad99LESUdfJwm_6_iji3nAIDHW2Ymx11E3vQGqpcy5WtTI9ml7WMlQZ7eBHIj7WnoMiz9hmMAWBKjSwGFu5YvjBhBmkZHhEJNowXyYHFkzhQWRqzd-xGvR_XHwLLSpfWikkNaBgyzdQUV2ikakz1DE7k9Jx51t_3p04zew5W0ukNTpO7ghWn7j0LBuLc7K4nKfV_bk6qvIBN1o30TYyKBlgD5fMEoMt0KoQEpQQMsoBN7g",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"description": "",
+									"type": "file",
+									"src": "Captura de tela de 2020-12-30 11-08-04.png"
+								}
+							]
+						},
+						"description": "Retorna usuario do token"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
