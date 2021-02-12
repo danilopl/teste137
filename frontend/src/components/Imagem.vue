@@ -1,22 +1,18 @@
 <template>
   <div class="imagem-card">
     <div class="card" v-if="imagem">
-      <div class="card-content">
         <img ref="imagem" :src="imagem.data_url" :alt="imagem.name">
         <h2 class="is-size-4 has-text-weight-bold">{{ imagem.name }}</h2>
         <span v-if="imagem.user_name">Postado por: {{ imagem.user_name }}</span>
         <small class="imagem-date">{{ imagem.created_at }}</small>
-      </div>
     </div>
-    <div class="card" v-if="!imagem">
-      <div class="card-content">
+    <div class="card" v-if="file">
         <h2 class="is-size-4 has-text-weight-bold">{{ file.name }}</h2> <br/>
         <span v-if="file.user_name">Postado por: {{ file.user_name }}</span> <br/>
         <small class="imagem-date">{{ file.created_at }}</small> <br/>
         <button @click="$router.go(-1)">Voltar</button>
         <button @click="download(file.id, file.name)">Download</button> <br/>
         <img @click="download(file.id, file.name)" ref="imagem" :alt="file.name">
-      </div>
     </div>
   </div>
 </template>

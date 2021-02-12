@@ -1,6 +1,5 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
     <router-link to="/perfil">Perfil</router-link> |
     <span v-if="isAdmin">
       <router-link to="/minhas-imagens">Minhas Imagens</router-link> |
