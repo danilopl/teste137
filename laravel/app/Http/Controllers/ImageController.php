@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Image;
 use App\Http\Resources\ImageResource;
 use Illuminate\Support\Facades\Storage;
+use Intervention\Image\ImageManagerStatic as ImageManager;
 
 
 class ImageController extends Controller
@@ -69,9 +70,14 @@ class ImageController extends Controller
             //store file into document folder
             $path = $request->file->store('public/images');
 
+            // $img = ImageManager::make($file->path());
+            // $img->width(200);
+            // $img->save('public/images/'.$file->getClientOriginalName());
+            
             //store your file into database
             $image = new Image();
             $image->path = $path;
+            $image->mime_type = $file->getMimeType();
             $image->name = $file->getClientOriginalName();
             $image->user_id = $request->user()->id;
             $image->save();

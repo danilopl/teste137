@@ -1,14 +1,28 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/profile/1">Perfil</router-link> |
-    <router-link to="/imagem/3">Imagem</router-link> |
+    <router-link to="/perfil">Perfil</router-link> |
+    <span v-if="isAdmin">
+      <router-link to="/minhas-imagens">Minhas Imagens</router-link> |
+    </span>
     <router-link to="/imagens">Lista de Imagens</router-link> |
+    <router-link to="/logout">Logout</router-link>  
   </div>
 </template>
 <script>
+import auth from '@/auth'
 export default {
   name: 'Nav',
+  data () {
+    return {
+      isAdmin: false
+    }    
+  },
+  methods: {
+  },
+  created() {
+    this.isAdmin=auth.isAdmin();
+  }
 }
 </script>
 <style lang="scss" scoped>

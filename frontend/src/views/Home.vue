@@ -1,6 +1,14 @@
 <template>
 <div class="hello">
   <h1>TESTE PRÁTICO – ANALISTA DE SISTEMAS BACK END (PHP)</h1>
+   <h3>Teste Pratico</h3>
+  <ul>
+    <li>
+      <router-link to="/login">
+        Login
+      </router-link>
+    </li>
+  </ul>
   <h3>Profile</h3>
   <ul>
     <li>

@@ -1,5 +1,5 @@
 <template>
-  <Nav />
+  <Nav  v-if="this.$route.path !== '/' && this.$route.path !== '/registrar'"/>
   <router-view/>
 </template>
 <script>
